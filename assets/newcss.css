@@ -569,11 +569,13 @@ img {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
+  
 }
 
 .qualification__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  align-items: center;
 }
 
 .qualification__subtitle {
@@ -704,7 +706,9 @@ img {
   padding: 0 1.5rem;
 }
 .portfolio__img {
-  width: 310px;
+  width: 500px;
+  height: 200px;
+  object-fit:contain;
   border-radius: 0.5rem;
   justify-self: center;
 }
@@ -819,12 +823,14 @@ img {
 
 .footer__subtitle {
   font-size: var(--small-font-size);
+  
 }
 
 .footer__links {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  padding-top: 1rem;
 }
 
 .footer__link:hover {
@@ -1087,6 +1093,7 @@ img {
   .qualification__sections {
     grid-template-columns: 0.5fr;
   }
+
   .services_container {
     grid-template-columns: repeat(3, 218px);
     justify-content: center;
