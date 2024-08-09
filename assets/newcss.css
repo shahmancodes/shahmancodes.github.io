@@ -219,6 +219,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  margin-left:-10px;
 }
 
 .nav__link:hover {
@@ -988,6 +989,9 @@ img {
     display: grid;
     grid-template-columns: 0.6fr;
     justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    
   }
 }
 
