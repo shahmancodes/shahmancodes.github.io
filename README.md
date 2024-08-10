@@ -20,4 +20,3 @@ The personal portfolio website showcases my skills, projects, and experiences as
 - CSS: Stylesheet language used for designing and formatting the website.
 - JavaScript: Programming language used for adding interactivity and dynamic features.
 
-![Portfolio](https://github.com/Venkateeshh/Portfolio-Website/assets/117290841/d05942e3-6970-47eb-9757-482f11bb6044)
