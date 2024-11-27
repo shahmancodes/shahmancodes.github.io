@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}Shahman Ali - Books{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/books.css') }}" />
+{% endblock %}
+
+{% block content %}
+<section class="books section">
+    <h2 class="section__title">My Reading List</h2>
+    <span class="section__subtitle">Books that have shaped my thinking</span>
+
+    <div class="books__container container">
+        <!-- Paulo Coelho -->
+        <div class="books__category">
+            <h3 class="books__author">Paulo Coelho</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">The Alchemist</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Zahir</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Spy</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Veronika Decides to Die</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">By the River Piedra I Sat Down and Wept</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Maktub</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yuval Noah Harari -->
+        <div class="books__category">
+            <h3 class="books__author">Yuval Noah Harari</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">Twenty One Lessons for the 21st Century</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Sapiens</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Sapiens: A Graphic History Volume 1 and 2</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- John Green -->
+        <div class="books__category">
+            <h3 class="books__author">John Green</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">The Fault in Our Stars</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Looking for Alaska</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Turtles All the Way Down</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">An Abundance of Katherines</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Holly Bourne -->
+        <div class="books__category">
+            <h3 class="books__author">Holly Bourne</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">All the Places I've Cried</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Yearbook</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Am I Normal Yet?</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Are We All Lemmings and Snowflakes</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">How Hard Can Love Be?</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fredrick Backman -->
+        <div class="books__category">
+            <h3 class="books__author">Fredrick Backman</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">A Man Called Ove</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Anxious People</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Walter Isaacson -->
+        <div class="books__category">
+            <h3 class="books__author">Walter Isaacson</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">The Code Breaker</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Steve Jobs</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Elon Musk</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- George Orwell -->
+        <div class="books__category">
+            <h3 class="books__author">George Orwell</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">Animal Farm</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">1984</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chetan Bhagat -->
+        <div class="books__category">
+            <h3 class="books__author">Chetan Bhagat</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">One Indian Girl</h4>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Three Mistakes of My Life</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Individual Books -->
+        <div class="books__category">
+            <h3 class="books__author">Other Notable Reads</h3>
+            <div class="books__list">
+                <div class="book__card">
+                    <h4 class="book__title">The Bastard of Istanbul</h4>
+                    <p class="book__author">Elif Shafak</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Thinking Fast and Slow</h4>
+                    <p class="book__author">Daniel Kahneman</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Stranger</h4>
+                    <p class="book__author">Albert Camus</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Wind-Up Bird Chronicle</h4>
+                    <p class="book__author">Haruki Murakami</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Predictably Irrational</h4>
+                    <p class="book__author">Dan Ariely</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Nudge</h4>
+                    <p class="book__author">Thaler and Sunstein</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Double Helix</h4>
+                    <p class="book__author">James D. Watson</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">An Absolutely Remarkable Thing</h4>
+                    <p class="book__author">Hank Green</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">A Thousand Splendid Suns</h4>
+                    <p class="book__author">Khaled Hosseini</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Einstein in Berlin</h4>
+                    <p class="book__author">Thomas Levinson</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Sum: Forty Tales from the Afterlives</h4>
+                    <p class="book__author">David Eagleman</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">When Breath Becomes Air</h4>
+                    <p class="book__author">Paul Kalanithi</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">The Subtle Art of Not Giving a F*ck</h4>
+                    <p class="book__author">Mark Manson</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Flatland</h4>
+                    <p class="book__author">Edwin A. Abbott</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Socrates' Apology</h4>
+                    <p class="book__author">Plato</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">How to Win Friends and Influence People</h4>
+                    <p class="book__author">Dale Carnegie</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">A Picture of Dorian Gray</h4>
+                    <p class="book__author">Oscar Wilde</p>
+                </div>
+                <div class="book__card">
+                    <h4 class="book__title">Zero to One</h4>
+                    <p class="book__author">Peter Thiel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

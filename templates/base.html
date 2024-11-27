@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Shahman Ali{% endblock %}</title>
+    <link rel="icon" type="image/x-png" href="{{ url_for('static', filename='img/idea.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/newcss.css') }}" />
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="{{ url_for('index') }}" class="nav__logo">
+                <img src="{{ url_for('static', filename='img/idea.png') }}" alt="Logo" class="nav__logo-img">
+                <div class="nav__logo-text">
+                    <span class="logo__name">Shahman</span>
+                    <span class="logo__subtitle">Tech Innovator</span>
+                </div>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{{ url_for('index') }}#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('index') }}#experience" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>Experience
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('index') }}#education" class="nav__link">
+                            <i class="uil uil-graduation-cap nav__icon"></i>Education
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('index') }}#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i>Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('projects') }}" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ url_for('index') }}#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contact
+                        </a>
+                    </li>
+                    <li class="nav__item nav__dropdown">
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-apps nav__icon"></i>More
+                            <i class="uil uil-angle-down nav__dropdown-icon"></i>
+                        </a>
+                        <ul class="nav__dropdown-content">
+                            <li><a href="{{ url_for('books') }}" class="nav__dropdown-link">Books</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container">
+                <div class="footer__content">
+                    <h3 class="footer__title">Shahman Ali</h3>
+                    <p class="footer__subtitle">Computer Science + AI Student</p>
+                </div>
+
+                <div class="footer__content">
+                    <ul class="footer__links">
+                        <li><a href="{{ url_for('index') }}#home" class="footer__link">Home</a></li>
+                        <li><a href="{{ url_for('index') }}#experience" class="footer__link">Experience</a></li>
+                        <li><a href="{{ url_for('index') }}#skills" class="footer__link">Skills</a></li>
+                        <li><a href="{{ url_for('projects') }}" class="footer__link">Projects</a></li>
+                        <li><a href="{{ url_for('books') }}" class="footer__link">Books</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <div class="footer__social">
+                        <a href="https://www.linkedin.com/in/shahman-ali/" target="_blank" class="footer__social-link">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/shahmancodes" target="_blank" class="footer__social-link">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="mailto:saliac@connect.ust.hk" class="footer__social-link">
+                            <i class="uil uil-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copy">&#169; 2024 Shahman Ali. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/ptj.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 

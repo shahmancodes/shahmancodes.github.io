@@ -1,0 +1,205 @@
+.books__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3.5rem;
+    padding: 0 1rem;
+}
+
+.books__category {
+    background: var(--container-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.books__category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--first-color), var(--first-color-lighter));
+}
+
+.books__category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.books__author {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--first-color-lighter);
+    position: relative;
+}
+
+.books__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.book__card {
+    background: var(--body-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.book__card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--first-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.book__card:hover {
+    transform: translateX(5px);
+    border-color: var(--first-color-lighter);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.book__card:hover::before {
+    transform: scaleY(1);
+}
+
+.book__title {
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    transition: color 0.3s;
+}
+
+.book__card:hover .book__title {
+    color: var(--first-color);
+}
+
+.book__author {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    padding-left: 0.75rem;
+    font-style: italic;
+}
+
+/* Add category counter */
+.books__category {
+    counter-increment: category;
+}
+
+.books__author::before {
+    content: counter(category, decimal-leading-zero);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-lighter);
+    font-weight: var(--font-medium);
+}
+
+/* Add book counter */
+.book__card {
+    counter-increment: book;
+}
+
+.book__card::after {
+    content: "#" counter(book, decimal-leading-zero);
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-lighter);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.book__card:hover::after {
+    opacity: 1;
+}
+
+/* Category stats */
+.books__category-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--first-color-lighter);
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 968px) {
+    .books__container {
+        gap: 2.5rem;
+    }
+
+    .books__category {
+        padding: 2rem;
+    }
+
+    .books__list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .books__list {
+        grid-template-columns: 1fr;
+    }
+
+    .book__card {
+        padding: 1.25rem;
+    }
+}
+
+/* Add smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add scroll to top button */
+.scroll-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background-color: var(--first-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top.show-scroll {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background-color: var(--first-color-alt);
+    transform: translateY(-3px);
+} 
