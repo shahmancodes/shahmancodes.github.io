@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Shahman Ali - Projects{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}" />
+{% endblock %}
+
+{% block content %}
+<!-- Featured Project Section -->
+<section class="featured section">
+    <h2 class="section__title">Featured Project</h2>
+    <span class="section__subtitle">unhinjed - Connecting Students</span>
+
+    <div class="featured__container container">
+        <div class="slideshow">
+            <div class="slideshow__slides">
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='img/unhinjed_1.jpeg') }}" alt="Unhinged Screenshot 1">
+                </div>
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='img/unhinjed_2.jpeg') }}" alt="Unhinged Screenshot 2">
+                </div>
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='img/unhinjed_3.jpeg') }}" alt="Unhinged Screenshot 3">
+                </div>
+
+                <!-- Updated navigation arrows with icons -->
+                <a class="prev" onclick="changeSlide(-1)">
+                    <i class="uil uil-angle-left-b"></i>
+                </a>
+                <a class="next" onclick="changeSlide(1)">
+                    <i class="uil uil-angle-right-b"></i>
+                </a>
+            </div>
+
+            <!-- Dots/circles -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="featured__content">
+            <p class="featured__description">
+                A competition and event directory platform for students across Hong Kong, focused on building communities based on shared interests.
+            </p>
+            <a href="https://www.unhinjed.com" class="button button--flex featured__button">
+                Visit Platform
+                <i class="uil uil-external-link-alt button__icon"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Entrepreneurial Projects Section -->
+<section class="projects section">
+    <h2 class="section__title">Entrepreneurial Projects</h2>
+    <span class="section__subtitle">Ventures and Business Solutions</span>
+
+    <div class="projects__container container grid">
+        <!-- USThing -->
+        <div class="projects__card">
+            <img src="{{ url_for('static', filename='img/USThing.png') }}" alt="" class="projects__img">
+            <div class="projects__modal">
+                <div>
+                    <span class="projects__subtitle">Mobile App</span>
+                    <h3 class="projects__title">USThing</h3>
+                    <p class="projects__description">
+                        All-in-one mobile application providing convenient access to HKUST services. Leading a team of developers to create innovative solutions.
+                    </p>
+                    <a href="https://usthing.xyz/" class="projects__button">
+                        Learn More <i class="uil uil-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopify Converter -->
+        <div class="projects__card">
+            <img src="{{ url_for('static', filename='img/Salvaged.jpeg') }}" alt="" class="projects__img">
+            <div class="projects__modal">
+                <div>
+                    <span class="projects__subtitle">Web App</span>
+                    <h3 class="projects__title">Shopify Converter</h3>
+                    <p class="projects__description">
+                        ChatGPT integrated solution for Shopify product data conversion. Built for and used by real businesses.
+                    </p>
+                    <a href="https://salvaged-solutions.streamlit.app/CSV_Converter" class="projects__button">
+                        Try it Out! <i class="uil uil-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Passion Projects Section -->
+<section class="projects section">
+    <h2 class="section__title">Passion Projects</h2>
+    <span class="section__subtitle">Personal Innovations & Experiments</span>
+
+    <div class="projects__container container grid">
+        <!-- RAG Chatbot -->
+        <div class="projects__card">
+            <img src="{{ url_for('static', filename='img/GPT.png') }}" alt="" class="projects__img">
+            <div class="projects__modal">
+                <div>
+                    <span class="projects__subtitle">AI/ML</span>
+                    <h3 class="projects__title">RAG Enabled UST Chatbot</h3>
+                    <p class="projects__description">
+                        An innovative chatbot trained on HKUST data using RAGs to revolutionize student information access.
+                    </p>
+                    <a href="#" class="projects__button">
+                        Under Development <i class="uil uil-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Database -->
+        <div class="projects__card">
+            <img src="{{ url_for('static', filename='img/CourseDB.jpeg') }}" alt="" class="projects__img">
+            <div class="projects__modal">
+                <div>
+                    <span class="projects__subtitle">AI/ML</span>
+                    <h3 class="projects__title">Course Database</h3>
+                    <p class="projects__description">
+                        Semantic search-powered global database of university courses. Making education more accessible and comparable.
+                    </p>
+                    <a href="https://github.com/shahmancodes/Course-Database" class="projects__button">
+                        View Code <i class="uil uil-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='ptj.js') }}"></script>
+{% endblock %} 
