@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, send_from_directory
 
 app = Flask(__name__, 
     static_folder='static',
@@ -17,6 +17,11 @@ def projects():
 @app.route('/books.html')
 def books():
     return render_template('books.html')
+
+# Route for serving documents
+@app.route('/docs/<filename>')
+def serve_document(filename):
+    return send_from_directory('static/docs', filename)
 
 # Error handlers
 @app.errorhandler(404)

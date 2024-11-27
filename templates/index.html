@@ -23,23 +23,23 @@
             <div class="home__data">
                 <h1 class="home__title">Hi there! I'm Shahman Ali</h1>
                 <h3 class="home__subtitle">
-                    Computer Science + AI Student
+                    Computer Science + AI Student (Business Minor)
                 </h3>
                 <p class="home__description">
-                    I'm not your typical computer science student. Although I like to code, my main focus is always on seeing how to use technology to innovate, and sometimes that means taking a step back and looking at the bigger picture.
+                    I try not to be your typical computer science student. Although I like to code, my main focus is always on seeing how to use technology to innovate, and sometimes that means taking a step back and looking at the bigger picture.
                 </p>
                 <div class="home__motto">
                     <span class="home__motto-text">Life Philosophy:</span>
-                    <strong class="home__motto-highlight">Think Different</strong>
+                    <strong class="home__motto-highlight">Think Different!</strong>
                 </div>
                 <div class="home__buttons">
-                    <a download="" href="{{ url_for('static', filename='Shahman Ali CV.pdf') }}" class="button button--flex">
+                    <a href="{{ url_for('serve_document', filename='Shahman Ali CV.pdf') }}" class="button button--flex">
                         <i class="fas fa-file-download button__icon"></i>
-                        View CV
+                        Curriculum Vitae
                     </a>
-                    <a download="" href="{{ url_for('static', filename='Transcript.pdf') }}" class="button button--flex button--light">
+                    <a href="{{ url_for('serve_document', filename='Transcript.pdf') }}" class="button button--flex button--light">
                         <i class="fas fa-graduation-cap button__icon"></i>
-                        View Transcript
+                        Transcript
                     </a>
                 </div>
             </div>
